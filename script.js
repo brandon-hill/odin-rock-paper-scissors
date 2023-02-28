@@ -5,13 +5,23 @@ function getComputerSelection(items) {
 
 // Get player selection and ensure it's valid
 function getPlayerSelection(promptMessage) { 
-  let input = prompt(`${promptMessage}`).toLowerCase();
-  if (input != "rock" && input != "paper" && input != "scissors") {
-    alert("Invalid input. Type rock, paper, or scissors to play");
-    getPlayerSelection(promptMessage);
-  }
-  return input;
+  let playerSelection = '';
+
+  do {
+    playerSelection = prompt(`${promptMessage}`).toLowerCase();
+
+    // Alert user if input is invalid
+    if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
+      alert("Invalid input. Type rock, paper, or scissors to play"); 
+      playerSelection = false;
+    }
+  } while (!playerSelection);
+  
+  console.log(playerSelection);
+  return playerSelection;
 }
+
+
 
 // Determine results
 function playRound(computerSelection, playerSelection) {
@@ -62,7 +72,7 @@ function game() {
 
     let result = playRound(computerSelection, playerSelection);
 
-    if (result == "draw" || false) {
+    if (result == "draw" || result == false) {
       i--;
     } else if (result == "lose") {
       computerScore++;
