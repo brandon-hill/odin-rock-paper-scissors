@@ -1,5 +1,3 @@
 # odin-rock-paper-scissors
 
-Rock Paper Scissors game for theodinprofject
-
-Currently only console accessible
+Rock Paper Scissors game for The Odin Project

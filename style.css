@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+}
+
+h4 {
+  margin: 8px 0;
+}
+
+body {
+  padding-top: 20vh;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: 100%;
+  width: 100%;
+  color: #262e34;
+  filter: url('#grainy');
+  background: linear-gradient(#e8eff4, #d4deed);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.main-container {
+  height: auto;
+  width: 100%;
+  max-width: 460px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px #00000016;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.game-container {
+  width: 100%;
+}
+
+.start-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.start-message {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: #777d7f;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.score-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.score {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.score-container > div {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  padding: 16px 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vs {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.35rem;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #60686e;
+  left: calc(50% - 16px);
+  top: calc(50% - 16px);
+  padding: 6px;
+  margin: 0;
+  background-color: #fff;
+}
+
+.player-score-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #edf8ff;
+  color: #0080e2;
+}
+
+.cpu-score-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fbf2f2;
+  color: #da3939;
+}
+
+h5 {
+  margin: 0;
+}
+
+.instructions {
+  margin: 1.2rem auto 2rem;
+  text-align: center;
+}
+
+.control-container {
+  padding: 0px 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button {
+  margin: 6px;
+  width: 100%;
+  padding: 16px 24px;
+  color: #fff;
+  border: none;
+  background-color: #0080e2;
+  box-shadow: 0px 2px 0px #10609d;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  box-shadow: 0px 3px 0px #b2babe;
+  background-color: #0b87e6;
+  box-shadow: 0px 3px 0px #0f5b95;
+}
+
+#start-btn {
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.round-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+#reset-btn {
+  box-shadow: none;
+  background-color: #fff;
+  color: #0b87e6;
+  justify-self: flex-end;
+  padding: 8px 16px;
+  width: auto;
+}
+
+#reset-btn:hover {
+  background-color: #edf8ff;
+}
+
+.btn-icon {
+  fill: #fff;
+  margin: 6px 8px;
+  height: 1.1rem;
+  pointer-events: none;
+}
+
+@media (max-width: 479px) {
+  body {
+    background: #fff;
+  }
+
+  .control-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  button {
+    padding: .9em;
+    height: auto;
+  }
+
+  .main-container {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    min-width: 175px;
+  }
+}
+

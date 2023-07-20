@@ -5,8 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="script.js"></script>
+  <div class="main-container">
+    <div class="game-container hidden">
+      <div class="round-container">
+        <h4>ROUND <span id="round">1</span></h4>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <div class="score-container">
+        <div class="player-score-container">
+          <h5>You</h5>
+          <span class="score" id="player-score">0</span>
+        </div>
+        <span class="vs">VS</span>
+        <div class="cpu-score-container">
+          <h5>CPU</h5>
+          <span class="score" id="cpu-score">0</span>
+        </div>
+      </div>
+      <p class="instructions hidden">Choose rock, paper, or scissors to play</p>
+      <div class="control-container">
+        <button class="rock-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="btn-icon" id="rock-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M168.5 72L256 165l87.5-93h-175zM383.9 99.1L311.5 176h129L383.9 99.1zm50 124.9H256 78.1L256 420.3 433.9 224zM71.5 176h129L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z"/></svg>Rock</button>
+        <button class="paper-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="btn-icon" id="paper-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H288V352c0-17.7 14.3-32 32-32h80V96c0-8.8-7.2-16-16-16H64zM288 480H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V320v5.5c0 17-6.7 33.3-18.7 45.3l-90.5 90.5c-12 12-28.3 18.7-45.3 18.7H288z"/></svg>Paper</button>
+        <button class="scissors-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="btn-icon" id="scissors-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 192l-39.5-39.5c4.9-12.6 7.5-26.2 7.5-40.5C224 50.1 173.9 0 112 0S0 50.1 0 112s50.1 112 112 112c14.3 0 27.9-2.7 40.5-7.5L192 256l-39.5 39.5c-12.6-4.9-26.2-7.5-40.5-7.5C50.1 288 0 338.1 0 400s50.1 112 112 112s112-50.1 112-112c0-14.3-2.7-27.9-7.5-40.5L499.2 76.8c7.1-7.1 7.1-18.5 0-25.6c-28.3-28.3-74.1-28.3-102.4 0L256 192zm22.6 150.6L396.8 460.8c28.3 28.3 74.1 28.3 102.4 0c7.1-7.1 7.1-18.5 0-25.6L342.6 278.6l-64 64zM64 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm48 240a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>Scissors</button>
+      </div>
+    </div>
+    <div class="start-container">
+      <header>
+        <h1 class="header-text">Rock Paper Scissors</h1>
+      </header>
+      <p class="start-message">Win rounds against a CPU to earn points. First to 5 wins!</p>
+      <button id="start-btn">Play</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
